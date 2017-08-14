@@ -20,6 +20,11 @@ parameters:
     cluster_name: ceph_ha
     apt_mk_version: nightly
     primary_interface: ens3
+
+    # default - will be change in overrides
+    ceph_mon_node01_address: 10.0.10.11
+    ceph_mon_node02_address: 10.0.10.12
+    ceph_mon_node03_address: 10.0.10.13
   linux:
     network:
       host:
