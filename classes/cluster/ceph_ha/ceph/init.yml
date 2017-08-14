@@ -26,11 +26,6 @@ parameters:
   linux:
     network:
       host:
-        cmn:
-          address: ${_param:ceph_mon_address}
-          names:
-          - ${_param:ceph_mon_hostname}
-          - ${_param:ceph_mon_hostname}.${_param:cluster_domain}
         cmn01:
           address: ${_param:ceph_mon_node01_address}
           names:
