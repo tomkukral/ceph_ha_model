@@ -1,7 +1,6 @@
 classes:
 - system.linux.system.repo.ubuntu
 - system.salt.master.pkg
-  #- system.salt.master.git
 - system.salt.minion.ca.salt_master
 - system.salt.master.api
 - system.reclass.storage.salt
@@ -67,7 +66,7 @@ parameters:
           expression: all
           node_param:
             single_address:
-              value_template: <<node_control_ip>>
+              value_template: <<node_ip>>
             linux_system_codename:
               value_template: <<node_os>>
             salt_master_host:
@@ -76,9 +75,9 @@ parameters:
           expression: <<node_hostname>>__startswith__cfg
           cluster_param:
             infra_config_address:
-              value_template: <<node_control_ip>>
+              value_template: <<node_ip>>
             infra_config_deploy_address:
-              value_template: <<node_deploy_ip>>
+              value_template: <<node_ip>>
             cluster_domain:
               value_template: <<node_domain>>
         ceph_osd_01:
