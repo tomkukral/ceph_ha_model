@@ -93,3 +93,12 @@ parameters:
           node_class:
             value_template:
               - cluster.<<node_cluster>>.ceph.cephfs
+        ceph_osd:
+          expression: <<node_hostname>>__startswith__ip-
+          node_param:
+            ceph_host_id:
+              value_template: <<param_ceph_host_id>>
+          node_class:
+             value_template:
+              - cluster.<<node_cluster>>.ceph.osd
+
