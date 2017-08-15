@@ -58,36 +58,6 @@ parameters:
               value_template: <<node_ip>>
             cluster_domain:
               value_template: <<node_domain>>
-#        ceph_osd_01:
-#          expression: <<node_hostname>>__equals__osd0
-#          cluster_param:
-#            ceph_osd_node01_address:
-#              value_template: <<node_control_ip>>
-#        ceph_osd_02:
-#          expression: <<node_hostname>>__equals__osd1
-#          cluster_param:
-#            ceph_osd_node02_address:
-#              value_template: <<node_control_ip>>
-#        ceph_osd_03:
-#          expression: <<node_hostname>>__equals__osd2
-#          cluster_param:
-#            ceph_osd_node03_address:
-#              value_template: <<node_control_ip>>
-        ceph_mon_01:
-          expression: <<node_hostname>>__equals__cmn01
-          cluster_param:
-            ceph_mon_node01_address:
-              value_template: <<node_control_ip>>
-        ceph_mon_02:
-          expression: <<node_hostname>>__equals__cmn02
-          cluster_param:
-            ceph_mon_node02_address:
-              value_template: <<node_control_ip>>
-        ceph_mon_03:
-          expression: <<node_hostname>>__equals__cmn03
-          cluster_param:
-            ceph_mon_node03_address:
-              value_template: <<node_control_ip>>
         ceph_cephfs:
           expression: <<node_hostname>>__startswith__cfs
           node_class:
