@@ -57,11 +57,11 @@ parameters:
           name: /dev/xvde
           type: gpt
           partitions:
-          - size: 10
+          - size: 10000
             type: xfs
-          - size: 10
+          - size: 10000
             type: xfs
-          - size: 10
+          - size: 10000
             type: xfs
-          - size: 10
+          - size: 10000
             type: xfs
