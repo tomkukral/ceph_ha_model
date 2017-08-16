@@ -30,29 +30,33 @@ parameters:
           class: bestssd
           weight: 1.5
   linux:
-   storage:
-     disk:
-       first_drive:
-         name: /dev/vdb
-         type: gpt
-         partitions:
-         - size: 4000
-           type: xfs
-         - size: 6000
-           type: xfs
-       second_drive:
-         name: /dev/vdc
-         type: gpt
-         partitions:
-         - size: 4000
-           type: xfs
-         - size: 6000
-           type: xfs
-       third_drive:
-         name: /dev/vdd
-         type: gpt
-         partitions:
-         - size: 4000
-           type: xfs
-         - size: 6000
-           type: xfs
+    storage:
+      disk:
+        first_drive:
+          name: /dev/xvdc
+          type: gpt
+          partitions:
+          - size: -1
+            type: xfs
+            mkfs: True
+        second_drive:
+          name: /dev/xvdd
+          type: gpt
+          partitions:
+          - size: -1
+            type: xfs
+            mkfs: True
+        third_drive:
+          name: /dev/xvde
+          type: gpt
+          partitions:
+          - size: -1
+            type: xfs
+            mkfs: True
+        journal_drive:
+          name: /dev/xvde
+          type: gpt
+          partitions:
+          - size: 10
+          - size: 10
+          - size: 10
