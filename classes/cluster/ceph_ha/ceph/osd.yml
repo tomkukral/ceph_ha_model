@@ -58,5 +58,10 @@ parameters:
           type: gpt
           partitions:
           - size: 10
+            type: xfs
           - size: 10
+            type: xfs
           - size: 10
+            type: xfs
+          - size: 10
+            type: xfs
