@@ -14,20 +14,20 @@ parameters:
       disk:
         '00':
           rule: hdd
-          dev: /dev/vdb2
-          journal: /dev/vdb1
+          dev: /dev/xvdb1
+          journal: /dev/xvde1
           class: bestssd
           weight: 1.5
         '01':
           rule: hdd
-          dev: /dev/vdc2
-          journal: /dev/vdc1
+          dev: /dev/xvdc1
+          journal: /dev/xvde2
           class: bestssd
           weight: 1.5
         '02':
           rule: hdd
-          dev: /dev/vdd2
-          journal: /dev/vdd1
+          dev: /dev/xvdd1
+          journal: /dev/xvde3
           class: bestssd
           weight: 1.5
   linux:
