@@ -10,6 +10,7 @@ parameters:
       dmcrypt: disable
       osd_scenario: raw_journal_devices
       fs_type: xfs
+      crush_parent: rack0
       disk:
         '00':
           rule: hdd
