@@ -1,8 +1,45 @@
 classes:
 - system.linux.system.repo.ceph
 - cluster.ceph_ha.infra
-#parameters:
+parameters:
 #  ceph:
 #    common:
 #      public_network: 10.0.10.11
 #      cluster_network: 10.0.10.11
+  ceph:
+    common:
+      config:
+        osd:
+          filestore_max_sync_interval: 30
+          filestore_fd_cache_size: 2048
+          filestore_op_threads: 8
+          filestore_queue_max_ops: 100
+          max_open_files: 65536
+          osd_disk_threads: 1
+          osd_op_threads: 12
+          osd_op_thread_suicide_timeout: 300
+          osd_snap_trim_sleep: 0.1
+          osd_max_scrubs: 1
+          osd_scrub_max_interval: 4838400
+          osd_scrub_min_interval: 2419200
+          osd_deep_scrub_interval: 2419200
+          osd_scrub_interval_randomize_ratio: 1.0
+          osd_disk_thread_ioprio_class: idle
+          osd_disk_thread_ioprio_priority: 0
+          osd_scrub_chunk_max: 1
+          osd_scrub_chunk_min: 1
+          osd_deep_scub_stride: 1048576
+          osd_scrub_load_threshold: 5.0
+          osd_scrub_sleep: 0.1
+          osd_backfill_scan_min: 4
+          osd_backfill_scan_max: 16
+          osd_recovery_threads: 1
+          osd_recovery_op_priority: 1
+          osd_recovery_max_single_start: 1
+          osd_recovery_max_active: 1
+          osd_max_backfills: 1
+          osd_map_message_max: 100
+          osd_map_cache_size: 200
+          osd_map_max_advance: 150
+          osd_map_share_max_epochs: 100
+          osd_pg_epoch_peristed_max_stale: 150
