@@ -1,6 +1,7 @@
 parameters:
   ceph:
     setup:
+      enabled: true
       pool:
         rbd:
           size: 2
