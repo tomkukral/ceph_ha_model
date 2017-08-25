@@ -21,19 +21,19 @@ parameters:
     salt_master_host: 127.0.0.1
   salt:
     master:
-      environment:
-        prd:
-          formula:
-            ceph:
-              source: git
-              address: 'https://github.com/salt-formulas/salt-formula-ceph.git'
-              revision: master
-        dev:
-          formula:
-            ceph:
-              source: git
-              address: 'https://github.com/salt-formulas/salt-formula-ceph.git'
-              revision: master
+#      environment:
+#        prd:
+#          formula:
+#            ceph:
+#              source: git
+#              address: 'https://github.com/salt-formulas/salt-formula-ceph.git'
+#              revision: master
+#        dev:
+#          formula:
+#            ceph:
+#              source: git
+#              address: 'https://github.com/salt-formulas/salt-formula-ceph.git'
+#              revision: master
       reactor:
         reclass/minion/classify:
         - salt://reclass/reactor/node_register.sls
