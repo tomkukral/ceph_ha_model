@@ -1,0 +1,10 @@
+parameters:
+  ceph:
+    setup:
+      pool:
+        rbd:
+          size: 2
+          min_size: 1
+          pg_num: 128
+          pgp_num: 128
+          type: replicated

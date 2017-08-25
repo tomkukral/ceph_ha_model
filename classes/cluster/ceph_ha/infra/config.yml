@@ -39,6 +39,10 @@ parameters:
         - salt://reclass/reactor/node_register.sls
   reclass:
     storage:
+      node:
+        ceph_mon_node01:
+          classes:
+          - cluster.${_param:cluster_name}.ceph.setup
       class_mapping:
         common_node:
           expression: all
