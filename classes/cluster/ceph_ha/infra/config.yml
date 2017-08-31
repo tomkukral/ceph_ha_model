@@ -1,6 +1,6 @@
 classes:
 - system.linux.system.repo.ubuntu
-- system.salt.master.git
+- system.salt.master.pkg
 - system.salt.minion.ca.salt_master
 - system.salt.master.api
 - system.reclass.storage.salt
@@ -9,7 +9,7 @@ classes:
 - cluster.ceph_ha.infra
 parameters:
   _param:
-    salt_master_base_environment: dev
+    salt_master_base_environment: prd
     reclass_data_repository: "https://github.com/tomkukral/ceph_ha_model.git"
 #    salt_master_environment_revision: master
 #    salt_master_environment_repository: "https://github.com/salt-formulas"
