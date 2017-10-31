@@ -8,7 +8,7 @@ parameters:
       crush_parent: ${_param:ceph_crush_parent}
 #      crush_update: false
 #      copy_admin_key: true
-#      bluestore_block_db_size: 521474836480
+      bluestore_block_db_size: 10073741824
       backend:
         bluestore:
           disks:
