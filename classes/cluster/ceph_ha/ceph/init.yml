@@ -9,13 +9,8 @@ parameters:
 
     ceph_osd_node01_hostname: osd01
     ceph_osd_node02_hostname: osd02
-    ceph_osd_node03_hostname: osd03
     ceph_osd_node01_address: 172.16.10.94
     ceph_osd_node02_address: 172.16.10.95
-    ceph_osd_node03_address: 172.16.10.96
-
-    ceph_cfs_node01_hostname: cfs01
-    ceph_cfs_node01_address: 172.16.10.97
 
     ceph_cluster_fsid: a619c5fc-c4ed-4f22-9ed2-66cf2feca23d
 
@@ -47,14 +42,3 @@ parameters:
           names:
           - ${_param:ceph_osd_node02_hostname}
           - ${_param:ceph_osd_node02_hostname}.${_param:cluster_domain}
-        osd03:
-          address: ${_param:ceph_osd_node03_address}
-          names:
-          - ${_param:ceph_osd_node03_hostname}
-          - ${_param:ceph_osd_node03_hostname}.${_param:cluster_domain}
-        cfs01:
-          address: ${_param:ceph_cfs_node01_address}
-          names:
-          - ${_param:ceph_cfs_node01_hostname}
-          - ${_param:ceph_cfs_node01_hostname}.${_param:cluster_domain}
-
