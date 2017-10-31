@@ -48,6 +48,7 @@ parameters:
           params:
             salt_master_host: ${_param:reclass_config_master}
             linux_system_codename: xenial
+            ceph_crush_parent: rack01
       class_mapping:
         common_node:
           expression: all
