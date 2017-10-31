@@ -1,3 +1,4 @@
 classes:
 - system.ceph.mon.cluster
+- system.ceph.mgr.cluster
 - cluster.ceph_ha.ceph.common
